@@ -10,20 +10,15 @@ from util.function import intval, not_need_login, time_span
 
 
 
-class ArticleHandler(BaseHandler):
+class LoginHandler(BaseHandler):
 	@not_need_login
 	def prepare(self):
 		BaseHandler.prepare(self)
 
     	def get(self):
-    		print 1
-        	self.render('article.html')
-
-class SearchHandler(BaseHandler):
-	@not_need_login
-	def prepare(self):
-		BaseHandler.prepare(self)
-
-    	def get(self):
-    		print 1
-        	self.render('search.html')
+        	self.render('login.html')
+        def post(self):
+        	username=self.get_argument('username')
+        	password=self.get_argument('password')
+        	if username==password:
+        		self.write("log in ")

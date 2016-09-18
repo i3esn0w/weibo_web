@@ -27,7 +27,6 @@ setting = {
 	"config_filename": tornado.options.options.config,
 	"compress_response": True,
 	"default_handler_class": controller.base.NotFoundHandler,
-	"xsrf_cookies": True,
 	"static_path": "static",
 	"download": "./download",
 	"session": {
@@ -72,11 +71,7 @@ except:
 # 	(r"/", "indexHandler"),
 # ], **setting)
 applications=tornado.web.Application([
-	(r'/','controller.base.homeHandler'),
-	(r'/register','controller.base.regHandler'),
-	(r'/blog','controller.base.indexHandler'),
-	(r'/s','controller.main.SearchHandler'),
-	(r'/post','controller.main.ArticleHandler')
+	(r'/','controller.login.LoginHandler')
 	],**setting)
 
 if __name__ == "__main__":
