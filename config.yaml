@@ -1,5 +1,5 @@
 "database":
-  "config": "mongodb://120.27.40.231:27017/"
+  "config": "mongodb://192.243.116.148:27017/"
   "db": "minblog"
 "global":
   "captcha":
@@ -27,5 +27,5 @@
     "sender": "root@domain"
 "session":
   "db": !!int "1"
-  "host": "120.27.40.231"
+  "host": "192.243.116.148"
   "port": !!int "6379"

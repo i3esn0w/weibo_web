@@ -71,7 +71,12 @@ except:
 # 	(r"/", "indexHandler"),
 # ], **setting)
 applications=tornado.web.Application([
-	(r'/','controller.login.LoginHandler')
+	(r'/login','controller.login.LoginHandler'),
+        (r'/index','controller.index.IndexHandler'),
+        (r'/main','controller.index.MainHandler'),
+        (r'/table','controller.table.TableHandler'),
+        (r'/content','controller.content.ContentHandler'),
+        (r'/wbuser','controller.content.WbUserHandler')
 	],**setting)
 
 if __name__ == "__main__":

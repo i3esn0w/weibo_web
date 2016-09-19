@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block header_title %}{{ error_title }}{% end %}
+{% block body %}
+<div class="am-container">
+    <div class="am-alert am-alert-{{ error_status }}" data-am-alert>
+      <button type="button" class="am-close">&times;</button>
+      <h3>{{ error_title }}</h3>
+      <p>{{ error_info }}</p>
+      <small><a href="{{ error_jump }}">µã»÷·µ»Ø</a></small>
+    </div>
+</div>
+
+{% end %}
+{% block footer_static %}
+    <script src="{{ static_url('assets/js/app.js') }}"></script>
+{% end %}

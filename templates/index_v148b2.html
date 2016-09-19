@@ -2,6 +2,7 @@
 <html>
 
 
+
 <!-- Mirrored from www.zi-han.net/theme/hplus/index_v1.html?v=4.0 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:20:20 GMT -->
 <head>
 
@@ -13,13 +14,11 @@
 
     <title>H+ 后台主题UI框架 - 主页示例</title>
 
-    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
-    <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico"> <link href="{{ static_url('css/bootstrap.min14ed.css?v=3.3.6') }}" rel="stylesheet">
+    <link href="{{ static_url('css/font-awesome.min93e3.css?v=4.4.0') }}" rel="stylesheet">
 
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
-    
-
+    <link href="{{ static_url('css/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ static_url('css/style.min862f.css?v=4.1.0') }}" rel="stylesheet">    
 </head>
 
 <body class="gray-bg">
@@ -28,7 +27,6 @@
             <blockquote class="text-warning" style="font-size:14px">
                 <h4 class="text-danger">欢迎进入微博内容分析系统</h4>
             </blockquote>
-
             <hr>
         </div>
         <div class="col-sm">
@@ -44,31 +42,29 @@
                                 <tr>
                                     <td>1</td>
                                     <td>微博内容总数</td>
-                                    <td>1300</td>
+                                    <td>{{count_num}}</td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>微博用户总数</td>
-                                    <td>1300</td>
+                                    <td>{{user_count}}</td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
                                     <td>系统用户数</td>
-                                    <td>5</td>
+                                    <td>{{system_user}}</td>
                                 </tr>
                             </tbody>
                         </table>
         </div>
     </div>
     
-    </script>
-    <script src="js/jquery.min.js?v=2.1.4"></script>
-    <script src="js/bootstrap.min.js?v=3.3.6"></script>
-    <script src="js/plugins/layer/layer.min.js"></script>
-    <script src="js/content.min.js"></script>
-    <script src="js/welcome.min.js"></script>
+    <script src="{{ static_url('js/jquery.min.js?v=2.1.4') }}"></script>
+    <script src="{{ static_url('js/bootstrap.min.js?v=3.3.6') }}"></script>
+    <script src="{{ static_url('js/plugins/layer/layer.min.js') }}"></script>
+    <script src="{{ static_url('js/content.min.js') }}"></script>
+    <script src="{{ static_url('js/welcome.min.js') }}"></script>
 </body>
-
 
 <!-- Mirrored from www.zi-han.net/theme/hplus/index_v1.html?v=4.0 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:20:20 GMT -->
 </html>

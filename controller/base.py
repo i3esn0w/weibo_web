@@ -97,7 +97,7 @@ class BaseHandler(SessionBaseHandler):
 			error_title = kwargs.get("title", "提示信息")
 			error_status = kwargs.get("status", "warning")
 			error_jump = kwargs.get("jump", "#back")
-			self.render("error.htm", error_info = info, error_status = error_status,
+			self.render("error.html", error_info = info, error_status = error_status,
 						error_title = error_title, error_jump = error_jump)
 		raise tornado.web.Finish()
 
