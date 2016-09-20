@@ -19,7 +19,7 @@ class BaseHandler(SessionBaseHandler):
 		self.add_header("Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-eval'; "
 												   "connect-src 'self'; img-src 'self' data:; style-src 'self'; "
 												   "font-src 'self'; frame-src 'self'; ")
-		self.add_header("X-Frame-Options", "deny")
+		self.add_header("X-Frame-Options", "SAMEORIGIN")
 		self.add_header("X-XSS-Protection", "1; mode=block")
 		self.add_header("X-Content-Type-Options", "nosniff")
 		self.add_header("x-ua-compatible:", "IE=edge,chrome=1")
